@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: llama-on-ocp
+  name: llama-stack-on-ocp
   namespace: openshift-gitops
 spec:
   project: default
