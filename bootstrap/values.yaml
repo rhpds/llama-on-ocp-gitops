@@ -15,11 +15,12 @@ deployer:
   apiUrl: https://api.cluster-guid.sandbox.opentlc.com:6443
 
 # For multi-user
-workspace:
-  git:
-    url: https://github.com/rhpds/llama-on-ocp-gitops.git
-    revision: main
-    path: workspace
+workspace: ''
+# workspace:
+#   git:
+#     url: https://github.com/rhpds/llama-on-ocp-gitops.git
+#     revision: main
+#     path: workspace
 
 # Set to empty to NOT install rhoai
 # rhoai: ''
