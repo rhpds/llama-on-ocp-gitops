@@ -2,6 +2,10 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+git:
+  url: https://github.com/rhpds/llama-on-ocp-gitops.git
+  revision: main
+
 user:
   count: 2
   prefix: user
@@ -10,8 +14,26 @@ deployer:
   domain: apps.cluster-guid.sandbox.opentlc.com
   apiUrl: https://api.cluster-guid.sandbox.opentlc.com:6443
 
+# For multi-user
 workspace:
   git:
-    url: https://github.com/rhpds/ci-template-gitops.git
+    url: https://github.com/rhpds/llama-on-ocp-gitops.git
     revision: main
     path: workspace
+
+# Set to empty to NOT install rhoai
+# rhoai: ''
+rhoai:
+  path: rhoai
+  namespace: redhat-ods-operator
+  # startingCSV: rhods-operator.x.y.z
+  # Set to empty to NOT install the datasciencecluster
+  # Not defining the key installs the datasciencecluster
+  # using the chart defaults (see rhoai/values.yaml)
+  # datasciencecluster: ''
+  # datasciencecluster:
+  #   components:
+  #     dashboard:
+  #       managementState: Managed
+  #     workbenches:
+  #       managementState: Managed
