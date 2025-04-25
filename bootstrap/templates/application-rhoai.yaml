@@ -43,4 +43,6 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.rhoai.namespace }}
+  syncPolicy:
+    automated: {}
 {{- end }}
