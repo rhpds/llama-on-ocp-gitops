@@ -1,0 +1,20 @@
+{{ if .Values.operatorGroup -}}
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: {{ .Values.operatorGroup.name }}
+  namespace: {{ .Values.operatorGroup.namespace }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  {{- with .Values.operatorGroup.labels }}
+  labels:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+  upgradeStrategy: {{ .Values.operatorGroup.upgradeStrategy | default "Default" }}
+  {{- if .Values.operatorGroup.targetNamespaces }}
+  targetNamespaces:
+    {{- toYaml .Values.operatorGroup.targetNamespaces | nindent 4 }}
+  {{- end }}
+{{- end }}
