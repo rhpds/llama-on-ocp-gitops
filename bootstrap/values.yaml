@@ -49,6 +49,52 @@ rhoai:
       workbenches:
         managementState: Managed
 
+# Set to empty to NOT install serverless
+# serverless: ''
+serverless:
+  path: serverless
+  namespace: openshift-serverless
+  startingCSV: serverless-operator.v1.34.1
+  installPlanApproval: Automatic
+  knativeServing:
+    enabled: true
+    name: knative-serving
+    namespace: knative-serving
+  knativeEventing:
+    enabled: true
+    name: knative-eventing
+    namespace: knative-eventing
+
+# Set to empty to NOT install servicemesh
+# servicemesh: ''
+servicemesh:
+  path: servicemesh
+  namespace: openshift-operators
+  startingCSV: servicemeshoperator.v2.6.0
+  installPlanApproval: Automatic
+  controlPlane:
+    enabled: true
+    name: basic
+    namespace: istio-system
+    create: true
+    spec:
+      version: v2.6
+      addons:
+        jaeger:
+          install:
+            storage:
+              type: Memory
+        kiali:
+          enabled: true
+        prometheus:
+          enabled: true
+        grafana:
+          enabled: true
+  memberRoll:
+    enabled: true
+    name: default
+    members: []
+
 llama:
   git_url: https://github.com/rhpds/llama-stack-on-ocp.git
   git_revision: main
