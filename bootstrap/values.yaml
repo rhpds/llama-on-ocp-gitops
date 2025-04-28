@@ -29,7 +29,7 @@ workspace: ''
 rhoai:
   path: rhoai
   namespace: redhat-ods-operator
-  startingCSV: rhods-operator.2.16.2
+  startingCSV: rhods-operator.2.19.0
   datasciencecluster:
     components:
       dashboard:
