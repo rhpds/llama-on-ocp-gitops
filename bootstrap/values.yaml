@@ -54,7 +54,7 @@ rhoai:
 serverless:
   path: serverless
   namespace: openshift-serverless
-  startingCSV: serverless-operator.v1.34.1
+  startingCSV: serverless-operator.v1.35.1
   installPlanApproval: Automatic
   knativeServing:
     enabled: true
