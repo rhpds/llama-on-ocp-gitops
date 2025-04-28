@@ -25,6 +25,6 @@ helper-status-checker:
     - operatorName: serverless-operator
       namespace:
         name: openshift-serverless
-      syncwave: '1'
+      syncwave: '3'
       serviceAccount:
         name: "serverless-status-checker"

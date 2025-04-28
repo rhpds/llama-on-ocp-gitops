@@ -34,7 +34,7 @@ spec:
             - operatorName: serverless-operator
               namespace:
                 name: {{ .Values.serverless.namespace }}
-              syncwave: '1'
+              syncwave: '3'
               serviceAccount:
                 name: "serverless-status-checker"
   destination:
