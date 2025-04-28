@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - values.yaml
     path: servicemesh
-    repoURL: https://github.com/your-username/llama-on-ocp-gitops.git
+    repoURL: this
     targetRevision: main
   syncPolicy:
     automated:

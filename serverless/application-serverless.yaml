@@ -12,8 +12,8 @@ spec:
     helm:
       valueFiles:
         - values.yaml
-    path: serverless
-    repoURL: https://github.com/your-username/llama-on-ocp-gitops.git
+    path: . 
+    repoURL: this
     targetRevision: main
   syncPolicy:
     automated:

@@ -11,47 +11,7 @@ operator:
   installPlanApproval: Automatic
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: servicemeshoperator.v2.6.0
-
-# Service Mesh Control Plane configuration
-controlPlane:
-  enabled: true
-  name: basic
-  namespace: istio-system
-  create: true
-  spec:
-    version: v2.6
-    tracing:
-      type: Jaeger
-      sampling: 10000
-    gateways:
-      egress:
-        enabled: true
-      ingress:
-        enabled: true
-    security:
-      dataPlane:
-        mtls: true
-      controlPlane:
-        mtls: true
-    addons:
-      jaeger:
-        install:
-          storage:
-            type: Memory
-      prometheus:
-        enabled: true
-      kiali:
-        enabled: true
-      grafana:
-        enabled: true
-
-# Service Mesh Member Roll configuration
-memberRoll:
-  enabled: true
-  name: default
-  members: []
-  # - example-namespace
+  startingCSV: servicemeshoperator.v2.6.7
 
 # Using sub-chart helper-status-checker
 helper-status-checker:

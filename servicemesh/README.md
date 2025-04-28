@@ -21,14 +21,6 @@ The following table lists the configurable parameters of the Service Mesh chart 
 | `operator.source` | Source catalog for the operator | `redhat-operators` |
 | `operator.sourceNamespace` | Namespace of the source catalog | `openshift-marketplace` |
 | `operator.startingCSV` | Specific version of the operator to install | `servicemeshoperator.v2.6.0` |
-| `controlPlane.enabled` | Whether to deploy a Service Mesh Control Plane | `true` |
-| `controlPlane.name` | Name of the Service Mesh Control Plane | `basic` |
-| `controlPlane.namespace` | Namespace for the Service Mesh Control Plane | `istio-system` |
-| `controlPlane.create` | Whether to create the Control Plane namespace | `true` |
-| `controlPlane.spec` | Control Plane configuration | See values.yaml |
-| `memberRoll.enabled` | Whether to create a Service Mesh Member Roll | `true` |
-| `memberRoll.name` | Name of the Service Mesh Member Roll | `default` |
-| `memberRoll.members` | List of namespaces to add to the Member Roll | `[]` |
 
 ## Usage
 

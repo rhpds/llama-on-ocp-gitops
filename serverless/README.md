@@ -22,12 +22,6 @@ The following table lists the configurable parameters of the Serverless chart an
 | `operator.source` | Source catalog for the operator | `redhat-operators` |
 | `operator.sourceNamespace` | Namespace of the source catalog | `openshift-marketplace` |
 | `operator.startingCSV` | Specific version of the operator to install | `serverless-operator.v1.34.1` |
-| `knativeServing.enabled` | Whether to enable Knative Serving | `true` |
-| `knativeServing.name` | Name of the Knative Serving instance | `knative-serving` |
-| `knativeServing.namespace` | Namespace for Knative Serving | `knative-serving` |
-| `knativeEventing.enabled` | Whether to enable Knative Eventing | `true` |
-| `knativeEventing.name` | Name of the Knative Eventing instance | `knative-eventing` |
-| `knativeEventing.namespace` | Namespace for Knative Eventing | `knative-eventing` |
 
 ## Usage
 

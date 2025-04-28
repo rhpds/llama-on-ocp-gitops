@@ -17,18 +17,6 @@ operator:
   sourceNamespace: openshift-marketplace
   startingCSV: serverless-operator.v1.34.1
 
-# Knative serving configuration
-knativeServing:
-  enabled: true
-  name: knative-serving
-  namespace: knative-serving
-
-# Knative eventing configuration
-knativeEventing:
-  enabled: true
-  name: knative-eventing
-  namespace: knative-eventing
-
 # Using sub-chart helper-status-checker
 helper-status-checker:
   enabled: true
