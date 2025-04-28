@@ -15,7 +15,7 @@ operator:
   installPlanApproval: Automatic
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: serverless-operator.v1.34.1
+  startingCSV: serverless-operator.v1.35.1
 
 # Using sub-chart helper-status-checker
 helper-status-checker:
