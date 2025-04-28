@@ -98,5 +98,5 @@ servicemesh:
 llama:
   git_url: https://github.com/rhpds/llama-stack-on-ocp.git
   git_revision: main
-  git_path: kubernetes
+  git_path: kubernetes/kustomize
   namespace: llama-serve
