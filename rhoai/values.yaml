@@ -60,3 +60,30 @@ helper-status-checker:
       syncwave: '1'
       serviceAccount:
         name: "rhoai-status-checker"
+
+authorino:
+  # Name of the Subscription resource
+  name: "authorino-operator"
+  
+  # Namespace where to install the operator
+  namespace: "openshift-operators"
+  
+  # Optional labels for the Subscription resource
+  labels:
+    app: "llama-on-ocp"
+    component: "authorino"
+  
+  # Optional annotations for the Subscription resource
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  
+  # Operator subscription details
+  channel: "tech-preview-v1"
+  installPlanApproval: "Automatic"
+  operatorName: "authorino-operator"
+  source: "redhat-operators"
+  sourceNamespace: "openshift-marketplace"
+  
+  # Optional: specify a specific version of the operator
+  # If not specified, will use the default version in the template (v1.0.2)
+  startingCSV: "authorino-operator.v1.0.2"
