@@ -1,0 +1,5 @@
+slack_mcp_server_secrets:
+  namespace: llama-serve
+  name: slack_mcp_server_secrets
+  slack_bot_token: secret
+  slack_team_id: secret
