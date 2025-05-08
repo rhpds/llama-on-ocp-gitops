@@ -16,14 +16,6 @@ deployer:
 
 showroom: ''
 
-# For multi-user
-workspace: ''
-# workspace:
-#   git:
-#     url: https://github.com/rhpds/llama-on-ocp-gitops.git
-#     revision: main
-#     path: workspace
-
 # Set to empty to NOT install rhoai
 # rhoai: ''
 rhoai:
