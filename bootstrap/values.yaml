@@ -45,7 +45,7 @@ llama:
 
 slack_mcp_server_secrets:
   namespace: llama-serve
-  name: slack-mcp-server-secrets
+  name: slack-secret
   path: mcp_servers
   slackBotToken: secret
   slackTeamId: secret
