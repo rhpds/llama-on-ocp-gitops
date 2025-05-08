@@ -45,10 +45,10 @@ llama:
 
 slack_mcp_server_secrets:
   namespace: llama-serve
-  name: slack_mcp_server_secrets
+  name: slack-mcp-server-secrets
   path: mcp_servers
-  slack_bot_token: secret
-  slack_team_id: secret
+  slack-bot-token: secret
+  slack-team-id: secret
 
 # UNUSED - REMOVE LATER
 # Set to empty to NOT install serverless
