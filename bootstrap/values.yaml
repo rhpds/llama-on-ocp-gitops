@@ -6,23 +6,11 @@ git:
   url: https://github.com/rhpds/llama-on-ocp-gitops.git
   revision: main
 
-user:
-  count: 2
-  prefix: user
-
 deployer:
   domain: apps.cluster-guid.sandbox.opentlc.com
   apiUrl: https://api.cluster-guid.sandbox.opentlc.com:6443
 
 showroom: ''
-
-# For multi-user
-workspace: ''
-# workspace:
-#   git:
-#     url: https://github.com/rhpds/llama-on-ocp-gitops.git
-#     revision: main
-#     path: workspace
 
 # Set to empty to NOT install rhoai
 # rhoai: ''
@@ -49,6 +37,20 @@ rhoai:
       workbenches:
         managementState: Managed
 
+llama:
+  git_url: https://github.com/rhpds/llama-stack-on-ocp.git
+  git_revision: main
+  git_path: kubernetes/kustomize/overlay/demo
+  namespace: llama-serve
+
+slack_mcp_server_secrets:
+  namespace: llama-serve
+  name: slack_mcp_server_secrets
+  path: mcp_servers
+  slack_bot_token: secret
+  slack_team_id: secret
+
+# UNUSED - REMOVE LATER
 # Set to empty to NOT install serverless
 # serverless: ''
 serverless:
@@ -94,9 +96,3 @@ servicemesh:
     enabled: true
     name: default
     members: []
-
-llama:
-  git_url: https://github.com/rhpds/llama-stack-on-ocp.git
-  git_revision: main
-  git_path: kubernetes/kustomize/overlay/demo
-  namespace: llama-serve
