@@ -49,6 +49,7 @@ slack_mcp_server_secrets:
   path: mcp_servers
   slackBotToken: secret
   slackTeamId: secret
+  graniteToken: secret
 
 # UNUSED - REMOVE LATER
 # Set to empty to NOT install serverless
