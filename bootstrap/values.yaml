@@ -50,6 +50,7 @@ slack_mcp_server_secrets:
   slackBotToken: secret
   slackTeamId: secret
   graniteToken: secret
+  llamaToken: secret
 
 # UNUSED - REMOVE LATER
 # Set to empty to NOT install serverless
